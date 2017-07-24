@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Node Hero - Authentication Tutorial</title>
+
+  </head>
+
+  <body>
+    {{{body}}}
+  </body>
+  <script>
+  var $COOKIE = (document.cookie || '').split(/;\s*/).reduce(function(re, c) {
+    var tmp = c.match(/([^=]+)=(.*)/);
+    if (tmp) re[tmp[1]] = unescape(tmp[2]);
+    return re;
+  }, {});
+
+  console.log($COOKIE && $COOKIE.user && JSON.parse($COOKIE.user) || 'no cookie')
+  </script>
+</html>
